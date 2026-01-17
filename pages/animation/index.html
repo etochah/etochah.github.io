@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="" type="image/jpg"> <!-- логотип сайту -->
+    <link rel="stylesheet" href="style.css" type="text/css"> <!-- підключення стилів -->
+    <title>Назва</title>
+   </head>
+  <body>
+<section class="section">
+<h2>Pricklad 1</h2>
+  <button class="btn hover-btn">Наведи</button>
+</section>
+
+<section class="section">
+<h2>Pricklad 2</h2>
+  <button class="btn move-btn">i zveidik</button>
+</section>
+
+<section class="section">
+<h2>Pricklad 3</h2>
+  <button class="btn pulse-btn">Im puls</button>
+</section>
+
+<section class="section">
+<h2>Pricklad 4</h2>
+<div class="card">
+  <h3>css card</h4>
+  <p>navedi for candy</p>
+  </div>
+</section>
+
+<section class="section">
+<h2>Pricklad 5</h2>
+<img class="photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS3PwERLLNB9XKFpeMgAMPxl5VvN3HRJnXQQ&s">
+</section>
+
+
+<section class="section">
+<h2>Pricklad 7</h2>
+<div class="slider-box">
+  <button class="slider-btn" id="prev"><</button>
+<img
+id="slide"
+src="https://i.pinimg.com/736x/71/e7/20/71e72071f795dd83b3e35bf81793208f.jpg"
+alt=slide image
+>
+    <button class="slider-btn" id="next">></button>
+</section>
+<script>
+let images = [
+"https://i.pinimg.com/736x/71/e7/20/71e72071f795dd83b3e35bf81793208f.jpg",
+"https://limbuscompany.wiki.gg/images/Lei_Heng_Idle_Sprite.png?7e816c",
+"https://limbuscompany.wiki.gg/images/thumb/Jia_Qiu_Idle_Sprite.png/1200px-Jia_Qiu_Idle_Sprite.png?314bd2",
+"https://preview.redd.it/jia-huan-is-potential-man-v0-33k5xhsrsd4f1.png?width=1024&format=png&auto=webp&s=e2ab6128363035480e4351a594c74c2dc004dadf",
+"https://limbuscompany.wiki.gg/images/thumb/Gubo_N_Corp._E.G.O_StandingSprite.png/244px-Gubo_N_Corp._E.G.O_StandingSprite.png?d4d1da",
+"https://static.wikia.nocookie.net/library-of-ruina/images/2/2e/CardMimicryArt.png/revision/latest?cb=20201218150003",  
+];
+
+let index=0;
+let slide=document.getElementById("slide");
+
+document.getElementById("next").onclick = function() {
+index++;
+if (index >= images.length) {
+index=0;
+ }
+slide.src=images[index];
+};
+
+document.getElementById("prev").onclick = function() {
+index--;
+if (index < 0) {
+index=images.length -1;
+ }
+slide.src=images[index];
+};
+</script>
+  </body> 
+</html>

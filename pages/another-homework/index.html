@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="" type="image/jpg"> <!-- логотип сайту -->
+    <link rel="stylesheet" href="style.css" type="text/css"> <!-- підключення стилів -->
+    <title>Назва</title>
+   </head>
+  <body>
+<section class="section">
+<h1>Cat and batytik</h1>
+<div class="catandbatyt">
+  <img class="move"
+       src="https://avatanplus.com/files/resources/original/58ebf3f89df4d15b59b10347.png">
+  <img src="https://imgpng.ru/d/trampoline_PNG12.png">
+</div>
+
+
+
+
+<section class="section">
+<h2>Slider</h2>
+<div class="slider-box">
+  <button class="slider-btn" id="prev"><</button>
+<img
+id="slide"
+src="https://media.4-paws.org/d/2/5/f/d25ff020556e4b5eae747c55576f3b50886c0b90/cut%20cat%20serhio%2002-1813x1811-720x719.jpg"
+alt=slide image
+>
+    <button class="slider-btn" id="next">></button>
+</section>
+<script>
+let images = [
+"https://www.webbox.co.uk/wp-content/uploads/2020/10/angry_cat_2-scaled-1568x1046-1.webp",
+"https://www.thebarc.com.au/files/content/barc/v/2/adopt/adopting-multiple-cats/img_1912.jpg?dimension=pageimage&w=480",
+"https://cdn.royalcanin-weshare-online.io/yj8HdHUBRYZmsWpckZgn/v1/ec9h-how-to-care-for-a-kitten-or-cat-hero-new-resized",
+"https://cdn.sanity.io/images/5vm5yn1d/pro/e8901b37029ada974f945ce569a5643b511fb4a9-1499x1000.jpg?fm=webp&q=80",
+"https://i.natgeofe.com/n/4cebbf38-5df4-4ed0-864a-4ebeb64d33a4/NationalGeographic_1468962.jpg",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4mB6qxKTqeJ5H08DhnjbJybh_WUXq40LPiw&s",  
+];
+
+let index=0;
+let slide=document.getElementById("slide");
+
+document.getElementById("next").onclick = function() {
+index++;
+if (index >= images.length) {
+index=0;
+ }
+slide.src=images[index];
+};
+
+document.getElementById("prev").onclick = function() {
+index--;
+if (index < 0) {
+index=images.length -1;
+ }
+slide.src=images[index];
+};
+</script>
+  </body> 
+</html>

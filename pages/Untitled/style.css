@@ -1,0 +1,21 @@
+.block{
+display: flex;
+gap: 20px;
+background: #aaa;
+}
+
+
+.block img{
+width:300px;
+}
+
+@media (max-width: 768px){
+  .block{
+flex-direction:colum;
+flex-align: center;
+background: #aaaaff;
+  }
+  .block img{
+width: 100%;
+  }
+}
